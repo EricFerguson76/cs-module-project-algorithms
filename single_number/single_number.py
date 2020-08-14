@@ -1,11 +1,17 @@
 '''
-Input: a List of integers where every int except one shows up twice
+Input: 
+
 Returns: an integer
 '''
-def single_number(arr):
-    # Your code here
 
-    pass
+
+def single_number(arr):
+    n = len(arr)
+    res = arr[0]
+
+    for i in range(1, n):
+        res = res ^ arr[i]
+    return res
 
 
 if __name__ == '__main__':
